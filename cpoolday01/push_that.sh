@@ -1,7 +1,4 @@
 #!/bin/bash
-
 git add --all
-echo "Commit message"
-read c
-git commit -m "$c" 
-git push origin $1
+git commit -m "$1" 
+git push
