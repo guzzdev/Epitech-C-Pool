@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 git add --all
 echo "Commit message"
