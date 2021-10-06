@@ -1,14 +1,9 @@
- /*
+/*
 ** EPITECH PROJECT, 2021
 ** my_print_comb
 ** File description:
-** Three digits numbers
+** Tree different digits numbers
 */
-
-
-void my_putchar(char c){
-    write(1,&c,1);
-}
 
 void my_result(int first_number, int second_number, int third_number)
 {
@@ -46,9 +41,4 @@ int my_print_comb(void)
         second_number = first_number;
     }
     return (0);
-}
-
-void main(void)
-{
-    my_print_comb();
 }
