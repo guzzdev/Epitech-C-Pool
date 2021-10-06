@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2021
 ** my_print_alpha
 ** File description:
-** Print the alphabet in ascending order
+** print alphabet
 */
 
 int my_print_alpha(void)
