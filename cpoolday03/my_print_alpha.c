@@ -5,12 +5,7 @@
 ** Print the alphabet in ascending order
 */
 
-void    my_putchar(char c)
-{
-    write(1, &c, 1);
-}
-
-int     main(void)
+int my_print_alpha(void)
 {
     int i;
     
@@ -18,9 +13,5 @@ int     main(void)
     {
         my_putchar(i);
     }
-
- 
-    my_putchar("\n");
-
     return (0);
 }
