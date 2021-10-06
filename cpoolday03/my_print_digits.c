@@ -4,6 +4,7 @@
 ** File description:
 ** Prints all digits
 */
+#include <unistd.h>
 
 my_print_digits(void)
 {

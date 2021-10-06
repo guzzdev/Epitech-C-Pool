@@ -4,6 +4,7 @@
 ** File description:
 ** Check if a number is negative, positive or null
 */
+#include <unistd.h>
 
 int my_isneg(int n)
 {

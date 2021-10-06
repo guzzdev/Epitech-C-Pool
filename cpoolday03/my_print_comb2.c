@@ -4,10 +4,7 @@
 ** File description:
 ** differents combinaisons
 */
-
-void my_putchar(char c){
-    write(1, &c, 1);
-}
+#include <unistd.h>
 
 int my_print_comb2(void)
 {
@@ -30,8 +27,4 @@ int my_print_comb2(void)
             }
         }
     }
-}
-
-void main(void){
-    my_print_comb2();
 }

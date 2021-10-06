@@ -4,6 +4,7 @@
 ** File description:
 ** Tree different digits numbers
 */
+#include <unistd.h>
 
 void my_result(int first_number, int second_number, int third_number)
 {

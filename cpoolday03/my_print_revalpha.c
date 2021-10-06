@@ -4,6 +4,7 @@
 ** File description:
 ** Print the alphabet in descending order
 */
+#include <unistd.h>
 
 int my_print_revalpha(void)
 {

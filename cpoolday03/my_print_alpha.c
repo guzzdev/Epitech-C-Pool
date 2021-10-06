@@ -4,6 +4,7 @@
 ** File description:
 ** print alphabet
 */
+#include <unistd.h>
 
 int my_print_alpha(void)
 {
