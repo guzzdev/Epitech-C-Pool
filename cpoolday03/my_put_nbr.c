@@ -1,12 +1,12 @@
 /*
 ** EPITECH PROJECT, 2021
-** my_put_nbr
+** my_put_nb
 ** File description:
 ** putchar
 */
 #include <unistd.h>
 
-int my_put_nbr(int nbr)
+int my_put_nbr(int nb)
 {
 	int nbr2;
 
@@ -14,13 +14,13 @@ int my_put_nbr(int nbr)
 		my_putchar('-');
 		nbr = nbr * (-1);
 	}
-	if (nbr >= 10) {
-		nbr2 = nbr % 10;
-		nbr = nbr / 10;
-		my_put_nbr(nbr);
-		my_putchar(nbr2 + 48);
+	if (nb >= 10) {
+		nb2 = nb % 10;
+		nb = nb / 10;
+		my_put_nb(nb);
+		my_putchar(nb2 + 48);
 	} else {
-		my_putchar(nbr + 48);
+		my_putchar(nb + 48);
 	}
 	return (0);
 }
