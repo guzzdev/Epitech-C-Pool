@@ -34,7 +34,7 @@ int my_print_comb(void)
     my_result(first_number, second_number, third_number);
     while (first_number <= 7){
         while (second_number < 9){
-            my_refactor(first_number, second_number, third_number)
+            my_refactor(first_number, second_number, third_number);
             second_number++;
             third_number = second_number;
         }
