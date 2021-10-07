@@ -4,28 +4,29 @@
 ** File description:
 ** differents combinaisons
 */
-#include <unistd.h>
 
-int my_print_comb2(void)
+int my_print_comb2 (void)
 {
-    char number1;
-    char number2;
-    char number3;
-    char number4;
+    int pair_one;
+    int pair_two;
 
-    for(number1 = 0; number1 < 10; number1++) {
-        for(number2 = 0; number2 < 9; number2++) {
-            for(number3 = 0; number3 < 10; number3++) {
-                for(number4 = 0; number4 < 10; number4++) {
-                    my_putchar(' ');
-                    my_putchar(number1 + 48);
-                    my_putchar(number2 + 48);
-                    my_putchar(' ');
-                    my_putchar(number3 + 48);
-                    my_putchar(number4 + 48);
-                    my_putchar(44);
-                }
+    pair_one = 0;
+    pair_two = 1;
+    while (pair_one != 99) {
+        my_putchar((pair_one / 10) + 48);
+        my_putchar((pair_one % 10) + 48);
+        my_putchar(' ');
+        my_putchar((pair_two / 10) + 48);
+        my_putchar((pair_two % 10) + 48);
+            if (pair_two == 99) {
+                pair_one++;
+                pair_two = pair_one +1;
+            } else {
+                pair_two++;
             }
-        }
+            if (pair_one != 99) {
+                my_putchar (',');
+                my_putchar (' ');
+            }
     }
 }
