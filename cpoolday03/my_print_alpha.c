@@ -4,9 +4,10 @@
 ** File description:
 ** print alphabet
 */
+
 #include <unistd.h>
 
-int my_print_alpha(void)
+void  my_print_alpha(void)
 {
     int i;
     for (i = 97; i < 123; i++) {
