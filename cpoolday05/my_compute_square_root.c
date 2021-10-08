@@ -14,13 +14,3 @@ int my_compute_square_root(int nb)
     }
     return 0;
 }
-
-int my_compute_square_root(int nb) {
-
-}
-
-int main(int argc, char const *argv[])
-{
-    printf("%d", my_compute_square_root(25000000));
-    return 0;
-}
