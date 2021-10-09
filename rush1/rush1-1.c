@@ -11,10 +11,6 @@ char ascii_side_edge = 124; // PIPE
 char ascii_space = 32; // SPACE
 char ascii_new_line = 10; // \n
 
-void my_putchar(char e) {
-    write(1, & e, 1);
-}
-
 void line_col(int x, char char_bool)
 {
     char char_extrem; // changer nom de variable
@@ -58,11 +54,12 @@ void rush(int x, int y) {
     }
     if (x == 1 && y == 1) {
         square(x, y, 1);
+        return;
     }
     if (y == 1) {
         line_col(x, 0);
     }
     if (x == 1) {
-        line_col(x, 2);
+        line_col(y, 2);
     }
 }
