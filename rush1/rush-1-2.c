@@ -1,25 +1,24 @@
 /*
- ** EPITECH PROJECT , 2021
- ** square
- ** File description:
- ** function to create square
- */
+** EPITECH PROJECT, 2021
+** rush-1-5
+** File description:
+** displays a square
+*/
 
-char ascii_edge = 42; // *
-char ascii_space = 32; // SPACE
-char ascii_new_line = 10; // \n
-char ascii_slash = 47;
-char ascii_backslash = 92;
+const char ascii_edge = 42;
+const char ascii_space = 32;
+const char ascii_new_line = 10;
+const char ascii_slash = 47;
+const char ascii_backslash = 92;
 
-int	my_putstr(char *str)
+int my_putstr(char * str)
 {
-  int c;
+    int c;
 
-  c = 0;
-  while (str[c] != '\0')
-    {
-      my_putchar(str[c]);
-      c++;
+    c = 0;
+    while (str[c] != '\0') {
+        my_putchar(str[c]);
+        c++;
     }
 }
 
@@ -27,7 +26,11 @@ void line_col(int x, char first_char, char last_char)
 {
     my_putchar(first_char);
     for (int i = 0; i < (x - 2); i++) {
-        (first_char == 42 ) ? my_putchar(ascii_space) : my_putchar(ascii_edge);
+        if ( first_char == ascii_edge ) {
+            my_putchar(ascii_space);
+        } else {
+            my_putchar(ascii_edge);
+        }
     }
     my_putchar(last_char);
     my_putchar(ascii_new_line);
@@ -79,8 +82,7 @@ void rush(int x, int y)
     if (x == 1 && y > 0) {
         col(y);
         return;
-    }
-    else {
+    } else {
         my_putstr("Invalid size\n");
     }
 }
