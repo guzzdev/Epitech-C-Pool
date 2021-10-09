@@ -1,86 +1,93 @@
 /*
- ** EPITECH PROJECT , 2021
- ** square
- ** File description:
- ** function to create square
- */
+** EPITECH PROJECT, 2021
+** rush-1-5
+** File description:
+** displays a square
+*/
 
-char ascii_space = 32; // SPACE
-char ascii_new_line = 10; // \n
-char ascii_a = 65;
-char ascii_b = 66;
-char ascii_c = 67;
+const char space = 32;
+const char new_line = 10;
+const char first_char = 65;
+const char last_char = 67;
+const char separator = 66;
 
-int	my_putstr(char *str)
+int my_putstr(char * str)
 {
-  int c;
+    int c;
 
-  c = 0;
-  while (str[c] != '\0')
-    {
-      my_putchar(str[c]);
-      c++;
+    c = 0;
+    while (str[c] != '\0') {
+        my_putchar(str[c]);
+        c++;
     }
 }
 
-void line_col(int x, char first_char, char last_char)
+void line(int x, int y)
 {
-    my_putchar(first_char);
-    for (int i = 0; i < (x - 2); i++) {
-        (first_char == ascii_b ) ? my_putchar(ascii_space) : my_putchar(ascii_b);
+    int cx = (y == 1) ? x : x -2;
+
+    (x > 1 && y > 1) ? my_putchar(first_char) : 0;
+    for (int i = 0; i < cx; i++) {
+        my_putchar(separator);
     }
-    my_putchar(last_char);
-    my_putchar(ascii_new_line);
+    (x > 1 && y > 1) ? my_putchar(last_char) : 0;
+    my_putchar(new_line);
 }
 
-void line(int x)
+void side(int x, int y)
 {
-    for (int i = 0; i < x; i++) {
-        my_putchar(ascii_b);
+    int cy = (y == 1) ? x : x -2;
+    
+    (y > 1 && x > 1) ? my_putchar(separator) : 0;
+    for (int i = 0; i < cy; i++) {
+        (x == 1) ? my_putchar(separator) : my_putchar(space);
+        (x == 1) ? my_putchar(new_line) : 0;
     }
-    my_putchar(ascii_new_line);
+    (y > 1) ? my_putchar(separator) : 0;
+    (y > 1) ? my_putchar(new_line) : 0;
 }
 
-void col(int y)
+void square(int x, int y)
 {
-    for (int i = 0; i < y; i++) {
-        my_putchar(ascii_b);
-        my_putchar(ascii_new_line);
-    }
-}
-
-void square(int x, int y, char char_bool)
-{
-    if (char_bool == 0) {
-        line_col(x, ascii_a, ascii_c);
-        for (int i = 0; i < (y - 2); i++)
-            line_col(x, ascii_b, ascii_b);
-        line_col(x, ascii_a, ascii_c);
+    if (y == 0 && y== 0) {
+        my_putchar(last_char);
+        my_putchar(new_line);
     } else {
-        my_putchar(ascii_b);
-        my_putchar(ascii_new_line);
+        line(x, y);
+        for (int i = 0; i < (y - 2); i++)
+            side(x, y);
+        line(x, y);
     }
 }
 
 void rush(int x, int y)
 {
     if (y > 1 && x > 1) {
-        square(x, y, 0);
+        square(x, y);
         return;
     }
     if (x == 1 && y == 1) {
-        square(x, y, 1);
+        line(1, 1);
         return;
     }
     if (y == 1 && x > 0) {
-        line(x);
+        line(x, y);
         return;
     }
     if (x == 1 && y > 0) {
-        col(y);
+        side(x, y);
         return;
-    }
-    else {
+    } else {
         my_putstr("Invalid size\n");
     }
+}
+
+void my_putchar(char e) {
+    write(1, &e, 1);
+}
+
+int main(int argc, char const *argv[])
+{
+    rush(4,4);
+    return 0;
 }
