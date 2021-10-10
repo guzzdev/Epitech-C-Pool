@@ -36,7 +36,7 @@ void line(int x, int y)
 
 void side(int x, int y)
 {
-    int cy = (x == 1) ? y : y -2;
+    int cy = (x == 1) ? y-1 : x -2;
 
     (y > 1 && x > 1) ? my_putchar(separator) : 0;
     for (int i = 0; i < cy; i++) {

@@ -22,67 +22,74 @@ int my_putstr(char * str)
     }
 }
 
-void line_col(int x, char first_char, char last_char)
+void line(int x, int y, char is_inverted)
 {
-    my_putchar(first_char);
-    for (int i = 0; i < (x - 2); i++) {
-        if ( first_char == ascii_edge ) {
-            my_putchar(ascii_space);
-        } else {
-            my_putchar(ascii_edge);
-        }
-    }
-    my_putchar(last_char);
-    my_putchar(ascii_new_line);
-}
+    int cx = (y == 1) ? x : x -2;
 
-void line(int x)
-{
-    for (int i = 0; i < x; i++) {
+    (is_inverted == 0) ? my_putchar(ascii_slash) : 0;
+    (is_inverted == 1) ? my_putchar(ascii_backslash) : 0;
+    for (int i = 0; i < cx; i++) {
         my_putchar(ascii_edge);
     }
+    (is_inverted == 0) ? my_putchar(ascii_backslash) : 0;
+    (is_inverted == 1) ? my_putchar(ascii_slash) : 0;
     my_putchar(ascii_new_line);
 }
 
-void col(int y)
+void side(int x, int y)
 {
-    for (int i = 0; i < y; i++) {
+    int cy = (x == 1) ? y-1 : x-2;
+
+    (y > 1 && x > 1) ? my_putchar(ascii_edge) : 0;
+    for (int i = 0; i < cy; i++) {
+        (x == 1) ? my_putchar(ascii_edge) : my_putchar(ascii_space);
+        (x == 1) ? my_putchar(ascii_new_line) : 0;
+    }
+    (y > 1) ? my_putchar(ascii_edge) : 0;
+    (y > 1) ? my_putchar(ascii_new_line) : 0;
+}
+
+void square(int x, int y)
+{
+    if (y == 0 && y == 0) {
         my_putchar(ascii_edge);
         my_putchar(ascii_new_line);
-    }
-}
-
-void square(int x, int y, char char_bool)
-{
-    if (char_bool == 0) {
-        line_col(x, ascii_slash, ascii_backslash);
-        for (int i = 0; i < (y - 2); i++)
-            line_col(x, 42, 42);
-        line_col(x, ascii_backslash, ascii_slash);
     } else {
-        my_putchar(ascii_edge);
-        my_putchar(ascii_new_line);
+        line(x, y, 0);
+        for (int i = 0; i < (y - 2); i++)
+            side(x, y);
+        line(x, y, 1);
     }
 }
 
 void rush(int x, int y)
 {
     if (y > 1 && x > 1) {
-        square(x, y, 0);
+        square(x, y);
         return;
     }
     if (x == 1 && y == 1) {
-        square(x, y, 1);
+        line(1, 1, -1);
         return;
     }
     if (y == 1 && x > 0) {
-        line(x);
+        line(x, y, -1);
         return;
     }
     if (x == 1 && y > 0) {
-        col(y);
+        side(x, y);
         return;
     } else {
         my_putstr("Invalid size\n");
     }
+}
+
+void my_putchar(char e){
+    write(1, &e, 1);
+}
+
+int main(int argc, char const *argv[])
+{
+    rush(5, 1);
+    return 0;
 }
