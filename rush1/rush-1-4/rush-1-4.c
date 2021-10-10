@@ -81,13 +81,3 @@ void rush(int x, int y)
         my_putstr("Invalid size\n");
     }
 }
-
-void my_putchar(char e) {
-    write(1, &e, 1);
-}
-
-int main(int argc, char const *argv[])
-{
-    rush(1,5);
-    return 0;
-}
