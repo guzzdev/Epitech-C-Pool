@@ -36,8 +36,8 @@ void line(int x, int y)
 
 void side(int x, int y)
 {
-    int cy = (y == 1) ? x : x -2;
-    
+    int cy = (x == 1) ? y : y -2;
+
     (y > 1 && x > 1) ? my_putchar(separator) : 0;
     for (int i = 0; i < cy; i++) {
         (x == 1) ? my_putchar(separator) : my_putchar(space);
@@ -49,7 +49,7 @@ void side(int x, int y)
 
 void square(int x, int y)
 {
-    if (y == 0 && y== 0) {
+    if (y == 0 && y == 0) {
         my_putchar(last_char);
         my_putchar(new_line);
     } else {
@@ -88,6 +88,6 @@ void my_putchar(char e) {
 
 int main(int argc, char const *argv[])
 {
-    rush(4,4);
+    rush(1,5);
     return 0;
 }
