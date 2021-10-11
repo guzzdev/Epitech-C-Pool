@@ -12,6 +12,10 @@
 *.map
 *.exp
 
+# Unit TEST
+*.gcda
+*.gcno
+
 # Precompiled Headers
 *.gch
 *.pch
@@ -35,6 +39,7 @@
 *.i*86
 *.x86_64
 *.hex
+unit_test
 
 # Debug files
 *.dSYM/
