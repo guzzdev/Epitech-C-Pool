@@ -1,3 +1,10 @@
+/*
+** EPITECH PROJECT, 2021
+** test_my_revstr
+** File description:
+** Test the reverse str file
+*/
+
 #include <criterion/criterion.h>  
 #include<stdio.h>
 #include<string.h>
