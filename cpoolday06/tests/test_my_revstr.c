@@ -10,7 +10,7 @@
 #include<string.h>
 
 char *my_revstr(char *str);
-char *strrev(char *str);
+char *my_strncpy(char *dest , char const *src , int n);
 
 Test(my_revstr , reverse_str)
 {
