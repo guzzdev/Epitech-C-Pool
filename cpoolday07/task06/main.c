@@ -5,10 +5,6 @@
 ** main
 */
 
-char my_putchar(char e) {
-    write(1, &e, 1);
-}
-
 int my_putstr(char const *str)
 {
     int a = 0;
