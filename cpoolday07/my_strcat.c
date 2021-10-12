@@ -9,6 +9,7 @@ char *my_strcat(char *dest , char const *src)
 {
     int dest_lenght;
     int i;
+    
     for (dest_lenght = 0; dest[dest_lenght] != '\0'; dest_lenght++);
     for (i = 0; src[i] != '\0'; i++)
         dest[dest_lenght + i] = src[i];
