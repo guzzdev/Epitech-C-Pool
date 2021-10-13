@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2021
-** main.c
+** my_rev_params
 ** File description:
-** main
+** my_rev_params
 */
 
 int my_putstr(char const *str)

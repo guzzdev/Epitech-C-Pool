@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2021
-** main.c
+** my_sort_params
 ** File description:
-** main
+** my_sort_params
 */
 
 int my_putstr(char const *str)
@@ -18,7 +18,8 @@ int my_putstr(char const *str)
 
 int my_strcmp(char const *s1 , char const *s2)
 {
-    int	i = 0;
+    int i = 0;
+
     while (s1[i]) {
         if (s1[i] < s2[i])
             return (-1);
@@ -37,7 +38,7 @@ int main(int argc, char *argv[])
 {
     char *temp;
     int i = 0;
-    
+
     for (i = 0; i < argc - 1; i++) {
         if (my_strcmp(argv[i], argv[i + 1]) > 0) {
             temp = argv[i];

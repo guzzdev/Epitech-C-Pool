@@ -5,7 +5,6 @@
 ** my_strncat
 */
 
-
 char *my_strncat(char *dest , char const *src , int nb)
 {
     int dest_lenght;
