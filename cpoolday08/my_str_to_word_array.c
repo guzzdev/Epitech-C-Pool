@@ -18,7 +18,6 @@ int count_words(char const *str)
             (my_str_isalpha(str[i - 1]) == 1 || my_str_isnum(str[i - 1]) == 1 ||
             i == 0))
             col++;
-        i++;
     }
     if (my_str_isalpha(str[i - 1]) == 1 || my_str_isnum(str[i - 1]) == 1)
         col++;
@@ -57,5 +56,6 @@ char    **my_str_to_word_array(char const *str)
         j = 0;
     }
     dest[col] = NULL;
+    free(stock);
     return (dest);
 }
