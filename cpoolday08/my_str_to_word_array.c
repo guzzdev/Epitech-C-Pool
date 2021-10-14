@@ -45,7 +45,7 @@ char    **my_str_to_word_array(char const *str)
     dest = malloc(sizeof(char *) * (my_strlen(str) + 1));
     for (; str[i] != '\0' && col < count_words(str); i++) {
         stock = malloc(sizeof(char) * (word_len(str, i) + 1));
-        for (; my_charisalpha(str[i]) == 1 || my_charisnum(str[i]) == 1; j++) {
+        for (; my_str_isalpha(str[i]) == 1 || my_str_isnum(str[i]) == 1; j++) {
             stock[j] = str[i];
             i++;
         }
