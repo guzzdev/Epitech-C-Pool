@@ -33,7 +33,7 @@ int word_len(char const *str, int i)
     return (lenght);
 }
 
-char    **my_str_to_word_array(char const *str)
+char **my_str_to_word_array(char const *str)
 {
     char **dest;
     char *stock;
