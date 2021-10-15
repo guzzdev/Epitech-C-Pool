@@ -8,7 +8,7 @@
 struct info_param *my_params_to_array(int ac, char **av)
 {
     struct info_param *result;
-    
+
     result = malloc(sizeof(struct info_param) * ac);
     for (int i = 0; i < ac; i++) {
         result[i].length = my_strlen(av[i]);
