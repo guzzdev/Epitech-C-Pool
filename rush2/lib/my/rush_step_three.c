@@ -5,13 +5,6 @@
 ** rush_step_three
 */
 
-float frequence(int x, int total)
-{
-    float a = (float)x;
-    my_put_nbr(a);
-    return ((a / total) * 100);
-}
-
 int sentence_len(char e[])
 {
     int i = 0;
@@ -37,7 +30,7 @@ int rush_step_three(int argc, char *const *argv)
                 || sentence[i] == argv[letter][0]-32)
                 ++count;
         }
-        display(argv[letter][0], count, frequence(count, set_len));
+        display(argv[letter][0], count, set_len);
         count = 0;
         ++letter;
     }
