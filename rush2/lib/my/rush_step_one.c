@@ -5,13 +5,7 @@
 ** rush_step_one
 */
 
-<<<<<<< HEAD
-#include<stdio.h>
-
 int rush_step_one(int argc, char *const *argv)
-=======
-int rush_step_one(int argc, char const **argv)
->>>>>>> master
 {
     int count = 0;
     char *sentence = argv[1];
