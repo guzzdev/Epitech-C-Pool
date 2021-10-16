@@ -1,5 +1,6 @@
-int display(char const *argv[])
+int display(char const *argv[], int count)
 {
-    
-    return 0;
+    my_putchar(argv[2][0]);
+    my_putchar(':');
+    my_putnbr(count);
 }
