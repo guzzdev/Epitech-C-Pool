@@ -5,9 +5,10 @@
 ** display
 */
 
-int display(char const *argv[], int count)
+int display(char arg, int count)
 {
-    my_putchar(argv[2][0]);
+    my_putchar(arg);
     my_putchar(':');
     my_put_nbr(count);
+    my_putchar(10);
 }

@@ -5,9 +5,10 @@
 ** main
 */
 
-int main(int argc, char const *argv[])
+#include "include/my.h"
+
+int main(int argc, char const **argv[])
 {
-
-
+    rush_step_one(argc, argv);
     return 0;
 }
