@@ -5,11 +5,19 @@
 ** rush_step_three
 */
 
-float frequence(int x, int total)
+void frequence(int x, int total)
 {
-    float a = (float)x;
-    my_put_nbr(a);
-    return ((a / total) * 100);
+    float pre_comma = (x * 100) / (float)total;
+    float post_comma = ((pre_comma - ((int)pre_comma)) * 100);
+
+    my_putchar('(');
+    my_put_nbr((int)pre_comma);
+    my_putchar('.');
+    my_put_nbr((int)post_comma);
+    my_putchar('%');
+    my_putchar(')');
+    my_putchar('\n');
+    return;
 }
 
 int sentence_len(char e[])
@@ -33,11 +41,12 @@ int rush_step_three(int argc, char *const *argv)
         return 84;
     while (letter != argc) {
         for (int i = 0; argv[1][i] != '\0'; ++i) {
-            if (sentence[i] == argv[letter][0] || sentence[i] == argv[letter][0]+32
-                || sentence[i] == argv[letter][0]-32)
+            if (sentence[i] == argv[letter][0] || sentence[i] == argv[letter][0] + 32
+                || sentence[i] == argv[letter][0] - 32)
                 ++count;
         }
-        display(argv[letter][0], count, frequence(count, set_len));
+        display(argv[letter][0], count);
+        frequence(count, set_len);
         count = 0;
         ++letter;
     }
