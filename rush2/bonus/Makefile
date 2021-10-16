@@ -14,11 +14,9 @@ NAMEL = libmy.a
 all: $(NAMEL)
 
 $(NAMEL): $(OBJ)
-	rm -f ../lib/libmy.a
 	gcc -c ../lib/my/*.c
 	mv *.o ../lib/my/
 	ar rc ../lib/my/$(NAMEL) ../lib/my/*.o
-	mv ../lib/my/$(NAMEL) ../lib/$(NAMEL)
 	make clean
 	echo "DONE"
 
