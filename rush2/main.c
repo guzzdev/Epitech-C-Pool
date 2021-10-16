@@ -5,10 +5,9 @@
 ** main
 */
 
-void main(void)
+int main(int argc, char const *argv[])
 {
-    char *sentence = "bonjour je suis francais et pas allemand";
 
-    rush2(sentence);
-    return;
+
+    return 0;
 }
