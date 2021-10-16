@@ -8,7 +8,7 @@
 int rush_step_one(int argc, char *const *argv)
 {
     int count = 0;
-    char *sentence = argv[1];
+    char *sentence = arg
 
     if (argc <= 1)
         return 84;
