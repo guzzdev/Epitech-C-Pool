@@ -16,10 +16,10 @@ NAMEI = my.h
 all: $(NAMEL)
 
 $(NAMEL): $(OBJ)
-	gcc -c $(OBJ)
-	ar rc $(NAMEL) $(OBJ)
-	cp $(NAMEL) ../$(NAMEL)
-	cp $(NAMEI) ../../include/$(NAMEI)
-	make clean
+	@gcc -c $(OBJ)
+	@ar rc $(NAMEL) $(OBJ)
+	@cp $(NAMEL) ../$(NAMEL)
+	@make clean
+	@echo "DONE"
 
 clean : $(shell rm -f $(OBJ))
