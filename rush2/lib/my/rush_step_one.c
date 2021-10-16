@@ -5,6 +5,8 @@
 ** rush_step_one
 */
 
+#include<stdio.h>
+
 int rush_step_one(int argc, char *const *argv)
 {
     int count = 0;  
@@ -14,7 +16,7 @@ int rush_step_one(int argc, char *const *argv)
         return 84;
     for (int i = 0; argv[1][i] != '\0'; ++i) {
         if (sentence[i] == argv[2][0] || sentence[i] == argv[2][0]+32
-        || sentence[i] == argv[2][0]-32)
+            || sentence[i] == argv[2][0]-32)
             ++count;
     }
     display(argv[2][0], count);
