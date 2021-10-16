@@ -14,10 +14,13 @@ NAMEL = libmy.a
 all: $(NAMEL)
 
 $(NAMEL): $(OBJ)
-	@gcc -c ../lib/my/$(OBJ)
-	@ar rc $(NAMEL) ./lib/my/$(OBJ)
-	@cp $(NAMEL) ../$(NAMEL)
-	@make clean
-	@echo "DONE"
+	rm -f ../lib/libmy.a
+	gcc -c ../lib/my/*.c
+	mv *.o ../lib/my/
+	ar rc ../lib/my/$(NAMEL) ../lib/my/*.o
+	mv ../lib/my/$(NAMEL) ../lib/$(NAMEL)
+	make clean
+	echo "DONE"
 
-clean : $(shell rm -f $(OBJ))
+clean : 
+	rm -f ../lib/my/*.o
