@@ -13,7 +13,8 @@ int rush_step_one(int argc, char *const *argv)
     if (argc <= 1)
         return 84;
     for (int i = 0; argv[1][i] != '\0'; ++i) {
-        if (sentence[i] == argv[2][0] || sentence[i] == argv[2][0]+32 || sentence[i] == argv[2][0]-32)
+        if (sentence[i] == argv[2][0] || sentence[i] == argv[2][0]+32
+        || sentence[i] == argv[2][0]-32)
             ++count;
     }
     return count;
