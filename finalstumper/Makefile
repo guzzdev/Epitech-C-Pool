@@ -20,13 +20,10 @@ LIBFLAG	= -L ./lib/my/ -lmy
 all: $(NAME)
 
 $(NAME):
-	@cd lib/my && make re
+	@cd lib/my 
 	@$(CC) $(SRC) -o $(NAME) $(LIBFLAG)
 
-clean:
-	@$(RM) $(OBJS)
-
 fclean: clean
-	@$(RM) $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all

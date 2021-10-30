@@ -5,6 +5,16 @@
 ** final_stumper
 */
 
+int display(char * str, int lenght, int height)
+{
+    my_putchar('[');
+    my_putstr(str);
+    my_putstr("] ");
+    my_put_nbr(lenght);
+    my_putchar(' ');
+    my_put_nbr(height);
+}
+
 void display_or(char buff, int col, int line)
 {
     display("rush1-3", col, line);
@@ -31,4 +41,18 @@ void display_handler(char *buff, int col, int line)
         display("rush1-4", col, line);
     else
         display("rush1-5", col, line);
+}
+
+void final_stumper(char *buff)
+{
+    int col = 0;
+    int line = 0;
+
+    for(; buff[col] != '\n'; col++);
+    for(int i = 0; buff[i] != '\0'; i++) {
+        if (buff[i] == '\n')
+            line++;
+    }
+    display_handler(buff, col, line);
+    my_putchar('\n');
 }
