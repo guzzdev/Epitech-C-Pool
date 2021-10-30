@@ -17,7 +17,7 @@ int error_handler(char * buff, int len)
      for (int i = 0; buff[i] != '\0'; i++) {
           if (buff[i] != 65 && buff[i] != 66 && buff[i] != 67
           && buff[i] != 111 && buff[i] != 42 && buff[i] != 45
-          && buff[i] != 47 && buff[i] != 92 && buff[i] != 124 
+          && buff[i] != 47 && buff[i] != 92 && buff[i] != 124
           && buff[i] != 10 && buff[i] != 0 && buff[i] != 32)
                return 84;
      }
