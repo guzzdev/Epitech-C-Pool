@@ -8,3 +8,5 @@
 #define BUFF_SIZE (4096)
 
 int final_stumper(char *);
+void display(char *, int, int);
+void display_handler(char *, int, int);

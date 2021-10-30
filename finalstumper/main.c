@@ -21,5 +21,6 @@ int main()
      buff[offset] = '\0';
      if (len < 0)
           return (84);
-     final_stumper(buff);//Buff
+     final_stumper(buff);
      return (0) ;
+}
