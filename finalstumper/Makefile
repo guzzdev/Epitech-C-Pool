@@ -5,11 +5,11 @@
 ## Makefile
 ##
 
-NAME  = final_stumper
+NAME = rush3
 
-CC	= gcc
+CC = gcc
 
-RM	= rm -f
+RM = rm -f
 
 SRC	= *.c
 
@@ -20,10 +20,13 @@ LIBFLAG	= -L ./lib/my/ -lmy
 all: $(NAME)
 
 $(NAME):
-	@cd lib/my 
+	@cd lib/my && make re
 	@$(CC) $(SRC) -o $(NAME) $(LIBFLAG)
 
+clean:
+	@$(RM) $(OBJS)
+
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all

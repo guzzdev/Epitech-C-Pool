@@ -21,6 +21,7 @@ $(NAME):
 	 @$(CC) -c $(SRC)
 	 @ar rc $(NAME) $(OBJ)
 	 @make clean
+	 echo "Lib built"
 
 clean:
 	$(RM) $(OBJ)
