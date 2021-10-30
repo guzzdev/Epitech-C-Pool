@@ -5,9 +5,6 @@
 ** final_stumper
 */
 
-int final_stumper(char *buff)
-{
-    for (int i = 0; buff[i] != '\0'; i++) {
-        my_putchar(buff[i]);
-    }
-}
+#define BUFF_SIZE (4096)
+
+int final_stumper(char *);

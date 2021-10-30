@@ -6,18 +6,20 @@
 */
 
 #include <unistd.h>
-#define BUFF_SIZE (4096)
+#include <stdio.h>
+#include "include/my.h"
+#include "include/final_stumper.h"
 
 int main()
 {
      char buff[BUFF_SIZE + 1];
      int offset = 0;
-     int len ;
+     int len;
      while ((len = read(0 , buff + offset , BUFF_SIZE - offset)) > 0) {
-          offset = offset + len ;
+          offset = offset + len;
      }
      buff[offset] = '\0';
      if (len < 0)
-          return (84) ;
-     rush3(buff) ;
+          return (84);
+     final_stumper(buff);//Buff
      return (0) ;

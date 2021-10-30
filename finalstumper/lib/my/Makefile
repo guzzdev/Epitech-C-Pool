@@ -5,23 +5,25 @@
 ## Makefile
 ##
 
-NAME  = final_stumper
+NAME = libmy.a
 
-CC	= gcc
+CC = gcc
 
-RM	= rm -f
+RM = rm -f
 
-SRC	= *.c
+SRC	= $(shell find . -type f -name '*.c')
 
 OBJ	= $(SRC:.c=.o)
-
-LIBFLAG	= -L ./lib/my/ -lmy
 
 all: $(NAME)
 
 $(NAME):
-	@cd lib/my 
-	@$(CC) $(SRC) -o $(NAME) $(LIBFLAG)
+	 @$(CC) -c $(SRC)
+	 @ar rc $(NAME) $(OBJ)
+	 @make clean
+
+clean:
+	$(RM) $(OBJ)
 
 fclean: clean
 	$(RM) $(NAME)
