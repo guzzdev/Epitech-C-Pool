@@ -51,7 +51,7 @@ int first_op(char **str)
     int	val1 = my_atoi(str, 0);
     int	val2;
     char op;
-    
+
     while (*str[0] == '*' || *str[0] == '/' || *str[0] == '%' || *str[0] == '^') {
         op = *str[0];
         *str = *str + 1;

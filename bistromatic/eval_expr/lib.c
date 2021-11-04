@@ -13,7 +13,7 @@ int my_putchar(char c)
 void my_putstr(char *str)
 {
     int i = 0;
-    
+
     while (str[i] != '\0') {
         my_putchar(str[i]);
         i++;
@@ -23,7 +23,7 @@ void my_putstr(char *str)
 int my_strlen(char *str)
 {
     int i = 0;
-    
+
     while (str[i] != '\0')
         i++;
     return (i);
@@ -32,7 +32,7 @@ int my_strlen(char *str)
 void my_put_nbr(int nb)
 {
     int	i = 0;
-    
+
     if (nb <= 9 && nb >= 0)
         my_putchar(nb + '0');
     if (nb < 0) {
