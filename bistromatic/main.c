@@ -47,7 +47,7 @@ static void check_base(char const *b)
     }
 }
 
-int             main(int ac, char **av)
+int main(int ac, char **av)
 {
     unsigned int size;
     char *expr;
