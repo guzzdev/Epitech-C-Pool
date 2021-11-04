@@ -5,6 +5,20 @@
 ** all atoi func
 */
 
+int	my_atoi2(const char *str)
+{
+    int	i = 0;
+    int	res = 0;
+
+    if (str[0] == '-')
+        return (-my_atoi2(str + 1));
+    while (str[i] >= '0' && str[i] <= '9' && str[i]) {
+        res = res * 10 + (str[i] - '0');
+        i++;
+    }
+    return (res);
+}
+
 int my_atoi(char **str, int op_before)
 {
     int op = 1;

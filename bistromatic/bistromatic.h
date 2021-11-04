@@ -1,3 +1,10 @@
+/*
+** EPITECH PROJECT, 2021
+** bistromatic.h
+** File description:
+** .h of bistromatic
+*/
+
 #define OP_OPEN_PARENT_IDX  0
 #define OP_CLOSE_PARENT_IDX 1
 #define OP_PLUS_IDX         2

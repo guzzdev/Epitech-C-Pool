@@ -1,27 +1,14 @@
+/*
+** EPITECH PROJECT, 2021
+** main
+** File description:
+** main of the bistro
+*/
+
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
 #include "bistromatic.h"
-
-/*
-** Replace these lines with an include of a header file containing these prototypes
-*/
-void  my_putstr(char const *);
-int   my_strlen(char const *);
-
-int	my_atoi2(const char *str)
-{
-    int	i = 0;
-    int	res = 0;
-
-    if (str[0] == '-')
-        return (-my_atoi2(str + 1));
-    while (str[i] >= '0' && str[i] <= '9' && str[i]) {
-        res = res * 10 + (str[i] - '0');
-        i++;
-    }
-    return (res);
-}
 
 static char  *get_expr(unsigned int size)
 {
@@ -79,4 +66,3 @@ int             main(int ac, char **av)
     my_putchar('\n');
     return (EXIT_SUCCESS);
 }
-
