@@ -10,7 +10,7 @@
 #include <string.h>
 #include "bistromatic.h"
 
-static void display_help()
+static void display_help(void)
 {
     my_putstr("USAGE\n./calc base operators size_read\n\n");
     my_putstr("DESCRIPTION\n- base: all the symbols of the base\n");
@@ -75,6 +75,5 @@ int main(int ac, char **av)
     size = my_atoi2(av[3]);
     expr = get_expr(size);
     my_put_nbr(eval_expr(expr, size));
-    my_putchar('\n');
     return (EXIT_SUCCESS);
 }
