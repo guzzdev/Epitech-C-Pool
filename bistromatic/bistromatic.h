@@ -5,6 +5,9 @@
 ** .h of bistromatic
 */
 
+#ifndef BISTROMATIC_H_
+#define BIDTROMATIC_H_
+
 #define OP_OPEN_PARENT_IDX  0
 #define OP_CLOSE_PARENT_IDX 1
 #define OP_PLUS_IDX         2
@@ -25,3 +28,5 @@
 #define ERROR_MSG        "error"
 
 char *eval_expr(char *expr, unsigned int size);
+
+#endif
