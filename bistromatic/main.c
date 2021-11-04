@@ -10,6 +10,14 @@
 #include <string.h>
 #include "bistromatic.h"
 
+int welcome_message()
+{
+    my_putstr("USAGE\n./calc base operators size_read\n\n");
+    my_putstr("DESCRIPTION\n- base: all the symbols of the base\n");
+    my_putstr("- operators: the symbols for the parentheses and the 5 operators\n");
+    my_putstr("- size_read: number of character to be read\n");
+}
+
 static char *get_expr(unsigned int size)
 {
     char *expr;
@@ -52,6 +60,10 @@ int main(int ac, char **av)
     unsigned int size;
     char *expr;
 
+    if (av[1][1] == 'h') {
+        welcome_message();
+        return (0);
+    }
     if (ac != 4) {
         my_putstr("Usage: ");
         my_putstr(av[0]);
