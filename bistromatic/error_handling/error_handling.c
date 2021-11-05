@@ -5,6 +5,8 @@
 ** error handling file 1 of the bistro-matic
 */
 
+#include <stdlib.h>
+
 int missing_operator(char **str)
 {
     int i = 0;

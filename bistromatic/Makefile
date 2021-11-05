@@ -5,10 +5,11 @@
 ## makefile
 ##
 
-SRC	=	*.c		\
-		*.h		\
-		eval_expr/*.c	\
-		eval_expr/*.h
+SRC	=	*.c					\
+		*.h					\
+		eval_expr/*.c		\
+		eval_expr/*.h		\
+		error_handling/*.c
 
 OBJ	=	$(SRC:.c&&.h=.o)
 

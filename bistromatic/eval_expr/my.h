@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2021
-** headers
+** my.h
 ** File description:
-** a headers
+** a my.h
 */
 
 #ifndef HEADERS_H

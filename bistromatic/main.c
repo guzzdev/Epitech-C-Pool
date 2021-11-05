@@ -72,6 +72,7 @@ int main(int ac, char **av)
     }
     check_base(av[1]);
     check_ops(av[2]);
+    missing_operator(&expr);
     size = my_atoi2(av[3]);
     expr = get_expr(size);
     my_put_nbr(eval_expr(expr, size));
