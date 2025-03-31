@@ -1,0 +1,6 @@
+final_stumper
+lib/my/libmy.a
+.vscode
+.code
+*.out
+rush3
